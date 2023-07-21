@@ -1,4 +1,10 @@
+#import
+
+import os
+import time
+
 # Welcome massage
+
 print("\n")
 print("\t ////////////////////////////////////////////////////////// \t")
 print("\n")
@@ -15,12 +21,22 @@ print("****************************************")
 print("\n")
 height = int(input(f"⁕ {name} enter your height \t: "))
 weight = int(input(f"⁕ {name} enter your weight \t: "))
-prosses = "Your data is prossesing......."
+prosses = "Your data is processing......."
 
 # Prosses
 
 print("\n")
-print("\t",str(prosses))
+
+def loading_animation(duration):
+    massage = "Your data is processing......."
+    for _ in range(duration):
+        print(massage, end='\r')
+        time.sleep(1)
+
+
+if __name__ == "__main__":
+    loading_animation(10)
+    
 print("\n")
 bmi_amount = weight/height*2
 
@@ -51,6 +67,8 @@ print(f"\t\t\t ☘--- {name} Good Bye ---☘ \t\t")
 print("\n \t\t\t\t\t ~Program By Savindu Deshan")
 print("\t ////////////////////////////////////////////////////////// \t")
 print("\n")
+
+
 
 
 # © All Copyright Reserved By Savindu Deshan
